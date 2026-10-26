@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Student Management System</title><link rel="stylesheet" href="style.css"></head>
+<body><header><div class="logo">SMS</div><div><h1>Student Management</h1><p>A simple workspace for student records</p></div></header>
+<main><section class="intro"><div><small>STUDENT RECORDS</small><h2>Manage students with ease.</h2><p>Add, search, update and remove student information.</p></div><div class="total">Total students<strong id="total">0</strong></div></section>
+<section class="panel"><h3 id="formTitle">Add a student</h3><form id="studentForm"><input type="hidden" id="editId"><div class="grid">
+<label>Full name<input id="name" required maxlength="80" placeholder="Enter full name"></label>
+<label>Roll number<input id="roll" required maxlength="30" placeholder="e.g. 24CSE001"></label>
+<label>Department<select id="department" required><option value="">Choose department</option><option>CSE</option><option>ECE</option><option>EEE</option><option>Mechanical</option><option>Civil</option><option>Other</option></select></label>
+<label>Email<input id="email" type="email" required maxlength="100" placeholder="student@example.com"></label></div>
+<div class="actions"><button class="primary" id="submitBtn">Add student</button><button class="secondary hidden" id="cancelBtn" type="button">Cancel edit</button></div><p id="message" role="status"></p></form></section>
+<section class="panel"><div class="listhead"><div><h3>Student directory</h3><p>Search by name, roll number, department or email.</p></div><input id="search" type="search" placeholder="Search students..."></div>
+<div class="tablewrap"><table><thead><tr><th>Name</th><th>Roll number</th><th>Department</th><th>Email</th><th>Actions</th></tr></thead><tbody id="rows"></tbody></table></div>
+<div class="footer"><span id="count">Showing 0 students</span><button class="secondary" id="exportBtn" type="button">Export CSV</button></div></section><footer>Student Management System · HTML, CSS and JavaScript</footer></main><script src="script.js"></script></body></html>
